@@ -72,15 +72,42 @@
                 <h1>Message Us</h1>
                 <div class="row">
                     <div class="col-1">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, dolore. Facilis, nam. Excepturi veniam tenetur fuga quia eum aliquid saepe, rerum doloremque quidem quod accusantium, eaque ipsa obcaecati ullam sunt.</p>
+                        <form id="messageForm" name="message-form" onsubmit="validateForm()">
+                            <label for="fullName">Nama : </label>
+                            <input type="text" name="fullName" id="fullName" placeholder="Nama"> <br>
+                            <div id="inputError" class="error"></div>
+
+                            <label for="birth-date">Tanggal Lahir : </label>
+                            <input type="date" name="birthDate" id="birthDate" ><br>
+
+                            <label>Jenis Kelamin : </label>
+                            <input type="radio" name="gender" id="male" value="Laki-laki" > Laki-laki
+                            <!-- <label for="male">Laki-laki</label> -->
+                            <input type="radio" name="gender" id="female" value="Perempuan" > Perempuan <br>
+
+                            <label for="messages">Pesan : </label><br>
+                            <textarea name="messages" id="messages" cols="30" rows="10" placeholder="Pesan" ></textarea>
+                            <div id="textareaError" class="error"></div>
+
+                            <input type="submit" value="Submit" class="btn">
+                        </form>
                     </div>
                     <div class="col-2">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel distinctio mollitia saepe esse ad ipsam facere? Natus, sint minima. Amet consequuntur natus fugit, delectus exercitationem repudiandae earum quo quasi quis.</p>
+                        <p><strong>Current Time : </strong><span id="currTime"></span></p></br>
+                        <p><strong>Nama : </strong><span id="getFullName"></span></p>
+                        <p><strong>Tanggal Lahir : </strong><span id="getBirthDate"></span></p>
+                        <p><strong>Jenis Kelamin : </strong><span id="getGender"></span></p>
+                        <p><strong>Pesan : </strong><span id="getMessages"></span></p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <footer class="footer">
+        <div class="copyright">
+            &copy; <span id="currYear"></span> <strong><span>Janny Eka Prayoga</span></strong>.
+        </div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>

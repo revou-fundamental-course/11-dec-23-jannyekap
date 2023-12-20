@@ -165,9 +165,46 @@ h1 {
     width: 60%;
     float: left;
     padding-left: 20px;
+    margin-left: 20px;
+    border: #0C1937 solid 1px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 5px;
+}
+
+label {
+    font-weight: bold;
 }
 
 
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: var(--color-blue);
+}
+
+.footer {
+    text-align: end;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    bottom: 0;
+}
 /* Mobile View */
 @media screen and (max-width: 768px) {
     .nav-items {
