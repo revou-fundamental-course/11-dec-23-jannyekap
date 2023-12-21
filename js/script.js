@@ -1,5 +1,5 @@
 function getName() { 
-    let name = prompt("Hai, Siapa nama Anda ?", "Yoga");
+    let name = prompt("Hi, What is your name ?", "Yoga");
     document.getElementById("name").innerHTML = name;
  }
 
@@ -40,27 +40,27 @@ function validateForm() {
 
     //cek jika input text nama kosong
     if (fullName.value.trim() === '') {
-        displayErrorMessage('textInputError','Nama tidak boleh kosong');
+        displayErrorMessage('textInputError','Name cannot be empty');
         fullName.focus();
         return false;
     }
 
     // cek apakah tanggal sudah dipilih
     if (birthDate.value === '') {
-        displayErrorMessage('dateInputError', 'Tanggal belum dipilih');
+        displayErrorMessage('dateInputError', 'Date of birth has not been selected');
         birthDate.focus();
         return false;
     }
 
     // cek apakah option sudah dipilih
     if (!Array.from(gender).some(option => option.checked)) {
-        displayErrorMessage('radioGroupError', 'Jenis Kelamin belum dipilih');
+        displayErrorMessage('radioGroupError', 'Gender has not been selected');
         return false;
     }
 
     // cek apakah textarea kosong
     if (messages.value.trim() === '') {
-        displayErrorMessage('textareaInputError', 'Pesan tidak boleh kosong');
+        displayErrorMessage('textareaInputError', 'Message cannot be empty');
         messages.focus();
         return false;
     }
