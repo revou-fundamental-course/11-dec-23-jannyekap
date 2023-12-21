@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- handle cache untuk push github -->
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,14 +40,14 @@
         </nav>
     </header>
     <main class="main-content">
-        <div class="greetings" id="home" style="background: url('assets/banner.png') center no-repeat;">
+        <div class="greetings" id="home">
             <div class="container">
                 <h1>Hi <span id="name"></span>, Welcome To JEP School</h1>
                 <p>First Digital School in Konoha</p>
                 <button class="btn" id="btnChangeName" onclick="getName()">Change Name</button>
             </div>
         </div>
-        <section id="facility" style="background: url('assets/bg-facility.png') center no-repeat;">
+        <section id="facility">
             <div class="container">
                 <h1>Our Facilitation</h1>
                 <div class="rounded-items">
@@ -67,7 +72,7 @@
                 </div>
             </div>
         </section>
-        <section id="message" style="background: url('assets/bg-message.png') center no-repeat;">
+        <section id="message">
             <div class="container">
                 <h1>Message Us</h1>
                 <div class="row">
