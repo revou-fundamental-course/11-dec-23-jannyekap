@@ -109,7 +109,6 @@ h1 {
 }
 
 .greetings {
-    background: url('assets/banner.png') center no-repeat;
     background-size: cover;
     color: var(--color-blue);
     height: 578px;
@@ -120,7 +119,6 @@ h1 {
 }
 
 #facility {
-    background: url('assets/bg-facility.png') center no-repeat;
     height: 578px;
     background-size: cover;
 }
@@ -153,7 +151,6 @@ h1 {
 }
 
 #message {
-    background: url('assets/bg-message.png') center no-repeat;
     height: 578px;
     background-size: cover;
 }
