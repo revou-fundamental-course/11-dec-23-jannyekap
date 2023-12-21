@@ -37,9 +37,9 @@
     <main class="main-content">
         <div class="greetings" id="home" style="background: url('assets/banner.png') center no-repeat;">
             <div class="container">
-                <h1>Hi <span id="name"></span>, Welcome To Website</h1>
-                <p>Ini adalah Website latihan pertama</p>
-                <button class="btn" id="btnChangeName" onclick="getName()">Ganti Nama</button>
+                <h1>Hi <span id="name"></span>, Welcome To JEP School</h1>
+                <p>First Digital School in Konoha</p>
+                <button class="btn" id="btnChangeName" onclick="getName()">Change Name</button>
             </div>
         </div>
         <section id="facility" style="background: url('assets/bg-facility.png') center no-repeat;">
@@ -74,27 +74,27 @@
                     <div class="col-1">
                         <form id="messageForm" name="message-form">
                             <div>
-                                <label for="fullName">Nama : </label>
+                                <label for="fullName">Name : </label>
                                 <input type="text" name="fullName" id="fullName" placeholder="Nama" required>
                                 <div class="error-message" id="textInputError"></div>
                             </div>
                             <div>
-                                <label for="birthDate">Tanggal Lahir : </label>
+                                <label for="birthDate">Birth Date : </label>
                                 <input type="date" name="birthDate" id="birthDate" required>
                                 <div class="error-message" id="dateInputError"></div>
                             </div>
                             <div style="margin-bottom: 20px;">
-                                <label>Jenis Kelamin : </label><br>
+                                <label>Gender : </label><br>
                                 <input type="radio" name="gender" id="male" value="Laki-laki" required>
-                                <label for="male">Laki-laki</label>
+                                <label for="male">Male</label>
     
                                 <input type="radio" name="gender" id="female" value="Perempuan" required>
-                                <label for="female">Perempuan</label>
+                                <label for="female">Female</label>
                                 <div class="error-message" id="radioGroupError"></div>
                             </div>
                             <div>
-                                <label for="messages">Pesan : </label><br>
-                                <textarea name="messages" id="messages" cols="30" rows="10" placeholder="Pesan" required></textarea>
+                                <label for="messages">Messages : </label><br>
+                                <textarea name="messages" id="messages" cols="30" rows="10" placeholder="Messages" required></textarea>
                                 <div class="error-message" id="textareaInputError"></div>
                             </div>
                             <button class="btn-message" type="button" onclick="submitForm()">Submit</button>
@@ -102,10 +102,10 @@
                     </div>
                     <div class="col-2">
                         <p><strong>Current Time : </strong><span id="currTime"></span></p></br>
-                        <p><strong>Nama : </strong><span id="getFullName"></span></p>
-                        <p><strong>Tanggal Lahir : </strong><span id="getBirthDate"></span></p>
-                        <p><strong>Jenis Kelamin : </strong><span id="getGender"></span></p>
-                        <p><strong>Pesan : </strong><span id="getMessages"></span></p>
+                        <p><strong>Name : </strong><span id="getFullName"></span></p>
+                        <p><strong>Birth Date : </strong><span id="getBirthDate"></span></p>
+                        <p><strong>Gender : </strong><span id="getGender"></span></p>
+                        <p><strong>Messages : </strong><span id="getMessages"></span></p>
                     </div>
                 </div>
             </div>
