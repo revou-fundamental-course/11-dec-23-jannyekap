@@ -19,16 +19,16 @@
         <nav>
             <ul class="nav-items">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#home" onclick="smoothScroll('home')">Home</a>
                 </li>
                 <li>
-                    <a href="#">Our Profile</a>
+                    <a href="pages/profile.html">Our Profile</a>
                 </li>
                 <li>
-                    <a href="#facility">Archievement</a>
+                    <a href="#facility" onclick="smoothScroll('facility')">Archievement</a>
                 </li>
                 <li>
-                    <a href="#message">Message Us</a>
+                    <a href="#message" onclick="smoothScroll('message')">Message Us</a>
                 </li>
             </ul>
             <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -42,54 +42,62 @@
                 <button class="btn" id="btnChangeName" onclick="getName()">Ganti Nama</button>
             </div>
         </div>
-        <div id="facility">
+        <section id="facility">
             <div class="container">
                 <h1>Our Facilitation</h1>
                 <div class="rounded-items">
                     <div class="rounded">
-                        <img src="/assets/facilitation/professional-teacher.jpg" alt="Image Alt Text" class="rounded-image">
+                        <img src="/assets/facilitation/professional-teacher.jpg" alt="teacher" class="rounded-image">
                         <div class="caption">
                           <p>Professional Teacher</p>
                         </div>
                     </div>
                     <div class="rounded">
-                        <img src="/assets/facilitation/sport-field.jpg" alt="Image Alt Text" class="rounded-image">
+                        <img src="/assets/facilitation/sport-field.jpg" alt="sport" class="rounded-image">
                         <div class="caption">
                           <p>Sport Field</p>
                         </div>
                     </div>
                     <div class="rounded">
-                        <img src="/assets/facilitation/classroom.jpg" alt="Image Alt Text" class="rounded-image">
+                        <img src="/assets/facilitation/classroom.jpg" alt="classroom" class="rounded-image">
                         <div class="caption">
                           <p>Classroom</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="message">
+        </section>
+        <section id="message">
             <div class="container">
                 <h1>Message Us</h1>
                 <div class="row">
                     <div class="col-1">
-                        <form id="messageForm" name="message-form" onsubmit="validateForm()">
-                            <label for="fullName">Nama : </label>
-                            <input type="text" name="fullName" id="fullName" placeholder="Nama"> <br>
-                            <div id="inputError" class="error"></div>
-
-                            <label for="birth-date">Tanggal Lahir : </label>
-                            <input type="date" name="birthDate" id="birthDate" ><br>
-
-                            <label>Jenis Kelamin : </label>
-                            <input type="radio" name="gender" id="male" value="Laki-laki" > Laki-laki
-                            <!-- <label for="male">Laki-laki</label> -->
-                            <input type="radio" name="gender" id="female" value="Perempuan" > Perempuan <br>
-
-                            <label for="messages">Pesan : </label><br>
-                            <textarea name="messages" id="messages" cols="30" rows="10" placeholder="Pesan" ></textarea>
-                            <div id="textareaError" class="error"></div>
-
-                            <input type="submit" value="Submit" class="btn">
+                        <form id="messageForm" name="message-form">
+                            <div>
+                                <label for="fullName">Nama : </label>
+                                <input type="text" name="fullName" id="fullName" placeholder="Nama" required>
+                                <div class="error-message" id="textInputError"></div>
+                            </div>
+                            <div>
+                                <label for="birthDate">Tanggal Lahir : </label>
+                                <input type="date" name="birthDate" id="birthDate" required>
+                                <div class="error-message" id="dateInputError"></div>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <label>Jenis Kelamin : </label><br>
+                                <input type="radio" name="gender" id="male" value="Laki-laki" required>
+                                <label for="male">Laki-laki</label>
+    
+                                <input type="radio" name="gender" id="female" value="Perempuan" required>
+                                <label for="female">Perempuan</label>
+                                <div class="error-message" id="radioGroupError"></div>
+                            </div>
+                            <div>
+                                <label for="messages">Pesan : </label><br>
+                                <textarea name="messages" id="messages" cols="30" rows="10" placeholder="Pesan" required></textarea>
+                                <div class="error-message" id="textareaInputError"></div>
+                            </div>
+                            <button class="btn-message" type="button" onclick="submitForm()">Submit</button>
                         </form>
                     </div>
                     <div class="col-2">
@@ -101,12 +109,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <footer class="footer">
-        <div class="copyright">
-            &copy; <span id="currYear"></span> <strong><span>Janny Eka Prayoga</span></strong>.
-        </div>
+        &copy; <span id="currYear"></span> <strong><span>Janny Eka Prayoga</span></strong>.
     </footer>
     <script src="js/script.js"></script>
 </body>
